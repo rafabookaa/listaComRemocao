@@ -3,12 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
-    <title>Lista de comprar com delete</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Lista de compras</title>
 </head>
-<body>
+<br>
+    <h1>Página para adicionar itens a sua lista de compras</h1>
+
+    <p>Primeiro selecione a categoria do item que deseja adiocionar á lista de compras</p>
+
+    <div class="selecao">
+        <label for="categoria">Selecione uma categoria de item: </label>
+             <select id="select">
+                <option value="branco"></option>
+                <option value="frutas">Frutas</option>
+                <option value="laticinios">Laticinios</option>
+                <option value="congelados">Congelados</option>
+                <option value="doces">Doces</option>
+              </select>
+    </div>
+
+    <div class="botao-adiciona">
+        <p>Agora escreva o item para adiciona-lo a lista: </p>
+        <input type="text" class="input-botao">
+        <button>Adicionar</button>
+    </div>
+</br>
+    <div class="botao-imprime">
+        <button class="imprime">Imprimir lista</button>
+    </div>
 
     <script src="main.js"></script>
-    
 </body>
 </html>
