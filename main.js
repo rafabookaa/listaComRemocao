@@ -53,7 +53,7 @@ let button = document.querySelector('button');
         if(adicionaNovoItem) {
             
         } else 
-        alert('Clique no botão imprimir lista, para que a sia lista de compras seja mostrada')
+        alert('Clique no botão imprimir lista, para que a sua lista de compras seja mostrada')
     }    
 })
 
