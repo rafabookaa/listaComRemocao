@@ -3,14 +3,16 @@ let frutasArray = [];
 let laticiniosArray = [];
 let congeladosArray = [];
 let docesArray = [];
+let remover;
+let itemRemovido;
 
 let perguntaInicial = prompt('Bem vindo ao site de lista de compras. \n Deseja adicionar um item a lista? \n Digite Sim ou Não')
 
 if(perguntaInicial == 'Sim') {
     
-    } else {
-        alert('Nenhum item foi adicionado a lista.')
-    }
+    } if( perguntaInicial == 'Não' ) {
+        removeItem();
+    } 
  
 let select = document.getElementById('select')
 select.addEventListener('change', function seleciona () {
@@ -23,7 +25,7 @@ function adicionaItem() {
 
     if(selecao == 'frutas') {
         frutasArray.push(input.value)
-        novoItem();
+         novoItem();
     }
 
     if(selecao == 'laticinios') {
@@ -48,12 +50,15 @@ let button = document.querySelector('button');
     button.onclick = adicionaItem;
 
     function novoItem () {
+
+        perguntaInicial;
+
         let adicionaNovoItem = confirm('Item adicionado á lista \n \n Deseja adicionar um novo item?')
 
         if(adicionaNovoItem) {
             
         } else 
-        alert('Clique no botão imprimir lista, para que a sua lista de compras seja mostrada')
+            removeItem();
     }    
 })
 
@@ -68,4 +73,22 @@ function imprimeLista () {
 
 let botaoImprime = document.querySelector('.imprime')
 botaoImprime.onclick = imprimeLista;
+
+function removeItem () {
+    remover = prompt('Deseja remover um item da lista? Digite Sim ou Não') 
+
+        if(remover == 'Sim') {
+            if(frutasArray.length === 0 || laticinios.length === 0 || congeladosArray.length === 0) {
+                alert( 'Não existe nenhum item adicionado á lista')
+            } else {
+                alert('Teste deu certo')
+            } 
+                
+            
+            // itemRemovido = prompt( `${imprimeLista()} \n Qual item da lista você deseja remover?`)
+            // if(remover == 'Não' ) {
+            //    alert('Nenhum item foi adicionado pa lista')
+            }
+        }
+
 
